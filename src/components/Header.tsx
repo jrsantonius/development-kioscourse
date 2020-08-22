@@ -70,12 +70,14 @@ export const Header = props => {
         flexDirection="row"
         flexWrap="wrap"
         justifyContent="center"
-
+        fontWeight="bold"
+        mb="2"
       >
         <MenuItems>
           <ChakraLink
             isExternal
             href="https://www.instagram.com/coursedigital.store/"
+           
           >Instagram</ChakraLink></MenuItems>
         <MenuItems><ChakraLink
           isExternal

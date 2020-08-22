@@ -18,11 +18,8 @@ function MyApp({ Component, pageProps }) {
 <ThemeProvider theme={theme}>
 <Head>
         
-        <link rel="icon"  type="image/x-icon" href="/static/logo.jpg" />
-        
-        
+        <link rel="icon"  type="image/x-icon" href="/static/favicon.ico" />
           <title>Course Digital Store</title>
-         
         </Head>
       
         <CSSReset />
