@@ -22,7 +22,7 @@ export const Instagram = ({ title }) => (
         <ChakraLink
         isExternal
         href="https://www.instagram.com/coursedigital.store/"
-      >  <img src={"static/igkiri.jpg"} /></ChakraLink>
+      >  <img src={"static/igbarukiri.jpg"} /></ChakraLink>
            
         </Box>
 
@@ -31,7 +31,7 @@ export const Instagram = ({ title }) => (
         <ChakraLink
         isExternal
         href="https://www.instagram.com/coursedigital.store/"
-      >  <img src={"static/igtengah.jpg"} /></ChakraLink>
+      >  <img src={"static/igbarutengah.jpg"} /></ChakraLink>
            
         </Box>
 
@@ -40,7 +40,7 @@ export const Instagram = ({ title }) => (
         <ChakraLink
         isExternal
         href="https://www.instagram.com/coursedigital.store/"
-      >  <img src={"static/igkanan.jpg"} /></ChakraLink>
+      >  <img src={"static/igbarukanan.jpg"} /></ChakraLink>
            
         </Box>
 

@@ -2,7 +2,14 @@ import { Flex, Heading, Box, Button, Icon, Text } from '@chakra-ui/core'
 import React from 'react'
 import { Container } from './Container'
 
+
+function scrollWin() {
+  window.scrollBy(0, 450);
+}
+
 export const HomeBan = ({ title }) => (
+
+  
 
   <Flex justifyContent="center" alignItems="center" mt="20" w="100%" pt="20">
     <Box
@@ -43,7 +50,7 @@ export const HomeBan = ({ title }) => (
 
         fontSize={["sm", "sm", "sm", "xl"]}
       >Place where you can learn new knowledge easily.</Box>
-      <Button width="fill" variant="solid" bg="#0C5EDE" color="white" ml="10" rounded="lg" mt="2">
+      <Button width="fill" variant="solid" bg="#0C5EDE" color="white" ml="10" rounded="lg" mt="2" onClick={scrollWin}>
         Choose Courses <Icon name="chevron-down" size="30px" />
       </Button>
     </Box>

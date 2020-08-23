@@ -73,6 +73,8 @@ export const Header = props => {
         fontWeight="bold"
         mb="2"
       >
+         <MenuItems>
+         <Link href="/">Home</Link></MenuItems>
         <MenuItems>
           <ChakraLink
             isExternal
