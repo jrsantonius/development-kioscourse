@@ -28,7 +28,8 @@ export const Header = props => {
       align="center"
       justify="space-between"
       wrap="wrap"
-      
+      borderBottomWidth="2px"
+      borderColor="#0C5EDE"
       bg="#fff"
       color="#0C5EDE"
       position="absolute"
