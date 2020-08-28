@@ -31,7 +31,7 @@ const Udemy = () => (
     <Container >
 
 
-    <Hero title="Udemy" />
+      <Hero title="Udemy" />
       <Main justifyContent="center" alignItems="center" >
         <Box
           color="#4A5568"

@@ -1,5 +1,5 @@
 
-import { Link as ChakraLink, Button,Flex, useColorMode, Box, Icon, Link, Alert,AlertIcon} from '@chakra-ui/core'
+import { Link as ChakraLink, Button, Flex, useColorMode, Box, Icon, Link, Alert, AlertIcon } from '@chakra-ui/core'
 import { Badge } from "reactstrap";
 
 import { Container } from './Container'
@@ -7,7 +7,7 @@ import { Container } from './Container'
 
 export const PlatformCard = (props) => {
   const property = {
-    
+
 
     imageUrl: props.img,
     imageAlt: props.imgAlt,
@@ -17,7 +17,7 @@ export const PlatformCard = (props) => {
     formattedPrice: props.price,
     reviewCount: props.review,
     rating: 4,
-    link:props.link,
+    link: props.link,
 
   };
 
@@ -26,44 +26,44 @@ export const PlatformCard = (props) => {
 
 
   return (
-    
-    
+
+
     <Box maxW="300px" borderWidth="1px" rounded="lg" overflow="hidden" m={2} backgroundColor="#F7FAFC" borderColor="A0AEC0" >
-      <img src={property.imageUrl} alt={property.imageAlt}  />
-     
-      <Container p="6"  alignItems="center">
-      
-     
-        <Box 
-        as="span" color="gray.600" fontSize="sm"
-         
-        alignItems="center"
-          
-         // isTruncated
+      <img src={property.imageUrl} alt={property.imageAlt} />
+
+      <Container p="6" alignItems="center">
+
+
+        <Box
+          as="span" color="gray.600" fontSize="sm"
+
+          alignItems="center"
+
+        // isTruncated
         >
-          {property.title} 
+          {property.title}
         </Box>
-    
-          <Box   mt="1"
+
+        <Box mt="1"
           fontWeight="semibold"
           as="h4"
           lineHeight="tight">
-         
-            {property.formattedPrice}
-          </Box>
-          <Link
-    
-    href={property.link}
-     
-  >
-         <Button width="fill" variant="solid" bg="#0C5EDE" color="white"  rounded="full"  mt="2" shadow="xl"> 
-        Choose Courses
+
+          {property.formattedPrice}
+        </Box>
+        <Link
+
+          href={property.link}
+
+        >
+          <Button width="fill" variant="solid" bg="#0C5EDE" color="white" rounded="full" mt="2" shadow="xl">
+            Choose Courses
       </Button>
-      </Link> 
+        </Link>
       </Container>
-      
+
     </Box>
-   
+
   );
 };
 
