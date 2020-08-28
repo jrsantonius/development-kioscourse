@@ -56,7 +56,7 @@ export const PlatformCard = (props) => {
     href={property.link}
      
   >
-         <Button width="fill" variant="solid" bg="#0C5EDE" color="white"  rounded="full"  mt="2"> 
+         <Button width="fill" variant="solid" bg="#0C5EDE" color="white"  rounded="full"  mt="2" shadow="xl"> 
         Choose Courses
       </Button>
       </Link> 
