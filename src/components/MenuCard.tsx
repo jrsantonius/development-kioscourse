@@ -30,7 +30,7 @@ export const MenuCard = (props) => {
      
   >
     
-    <Box maxW="sm" borderWidth="1px" rounded="lg" overflow="hidden" m={2} backgroundColor="#F7FAFC" borderColor="A0AEC0" >
+    <Box maxW="sm" borderWidth="1px" rounded="lg" overflow="hidden" m={2} backgroundColor="#F7FAFC" borderColor="A0AEC0" shadow="xl">
       <img src={property.imageUrl} alt={property.imageAlt}  />
      
       <Box p="6" >

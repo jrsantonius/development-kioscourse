@@ -74,7 +74,7 @@ export const CourseCard = (props) => {
 
 
   return (
-    <Box maxW="sm" borderWidth="1px" rounded="lg" overflow="hidden" m={2} >
+    <Box maxW="sm" borderWidth="1px" rounded="lg" overflow="hidden" m={2} shadow="xl">
 
       {deadmenit ?
         <Alert status="error">
