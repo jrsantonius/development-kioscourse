@@ -5,8 +5,7 @@ import {
     Icon,
     List,
     ListIcon,
-    ListItem,
-    Box
+    ListItem,Box
   } from "@chakra-ui/core";
 import React, { Component } from 'react';
 import { CourseCard } from "../components/CourseCard";
@@ -18,7 +17,6 @@ import { Main } from "../components/Main";
 import { DarkModeSwitch } from "../components/DarkModeSwitch";
 import { CTA } from "../components/CTA";
 import { Footer } from "../components/Footer";
-import { Pagination } from "../components/pagination";
 
 import Loader from 'react-loader-spinner';
 import Head from 'next/head'
@@ -42,7 +40,7 @@ class App extends React.Component<{},any>{
   }
  
   componentDidMount() {
-    fetch("/api/design-api")
+    fetch("/api/it-software-development-api")
       .then(response => response.json())
       .then(base => this.setState({ results: base.dataTotal ,isLoading: false}));
      
@@ -59,7 +57,10 @@ class App extends React.Component<{},any>{
       <Header/>
         <Container>
          
-            <Hero title="Design"/>
+            <Hero title="IT & Software Development"/>
+            <Box>
+
+            </Box>
             <Main>
             <Container
         flexDirection="row"
@@ -70,7 +71,7 @@ class App extends React.Component<{},any>{
         justifyContent="center" 
         py={2}
       >
-       {this.state.isLoading ? 
+        {this.state.isLoading ? 
         <div
              style={{
                 width: "100%",

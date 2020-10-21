@@ -4,7 +4,7 @@ async function getSortedPostsData() {
   // Instead of the file system,
   // fetch post data from an external API endpoint
   const res = await fetch(
-    "https://teachinguide.azure-api.net/course-coupon?sortCol=students&sortDir=DESC&length=12&page=1&inkw=&discount=100&language=English&cat=Development",
+    "https://teachinguide.azure-api.net/course-coupon?sortCol=students&sortDir=DESC&length=12&page=1&inkw=&discount=100&language=English&cat=Development%7CIT%20%26%20Software",
     {
       headers: {
         accept: "application/json, text/plain, */*",
@@ -40,7 +40,7 @@ export default async (req, res) => {
       // Instead of the file system,
       // fetch post data from an external API endpoint
       const res = await fetch(
-        "https://teachinguide.azure-api.net/course-coupon?sortCol=students&sortDir=DESC&length=50&inkw=&discount=100&language=English&cat=Development",
+        "https://teachinguide.azure-api.net/course-coupon?sortCol=students&sortDir=DESC&length=50&inkw=&discount=100&language=English&cat=Development%7CIT%20%26%20Software ",
         {
           headers: {
             accept: "application/json, text/plain, */*",

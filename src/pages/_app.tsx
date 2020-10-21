@@ -18,8 +18,8 @@ function MyApp({ Component, pageProps }) {
     <ThemeProvider theme={theme}>
       <Head>
 
-        <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
-        <title>Course Digital Store</title>
+        <link rel="icon" type="image/x-icon" href="/static/favico.png" />
+        <title>Kios Course</title>
       </Head>
 
       <CSSReset />

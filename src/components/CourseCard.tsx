@@ -31,9 +31,9 @@ export const CourseCard = (props) => {
   var deadmenit = false;
   console.log(tenggathari);
 
-  var sisajam = tenggatjam;
-  var sisahari = tenggathari;
-  var sisamenit = tenggatmenit;
+  var sisajam = Math.round(tenggatjam);
+  var sisahari = Math.round(tenggathari);
+  var sisamenit = Math.round(tenggatmenit);
 
   if (tenggathari == 0) {
     // sisajam = 24 - tenggatjam;
@@ -49,23 +49,59 @@ export const CourseCard = (props) => {
     sisahari = 0;
   }
 
-  if (sisahari <= 1) {
-    deadhari = true;
-    if (sisajam <= 12) {
-      deadjam = true;
-      if (sisajam <= 1) {
-        deadmenit = true;
-      }
-    }
+  // if (sisahari <= 1) {
+  //   deadhari = true;
+  //   if (sisajam <= 12) {
+  //     deadjam = true;
+  //     if (sisajam <= 1) {
+  //       deadmenit = true;
+  //     }
+  //   }
+  // }
+  if (sisahari < 1){
+    sisahari=0;
   }
 
-  var sisa = "sisa " + sisahari + " hari " + sisajam + " jam " + sisamenit + " menit";
+  if (sisajam < 1){
+    sisajam=0;
+  } else if (sisajam >= 24){
+    sisajam=sisajam % 24;
+    sisahari+=sisajam  / 24;
+  }
 
-  var captionjam = "Promo berakhir dalam " + sisajam + " Jam";
+  if (sisamenit < 1){
+    sisamenit=0;
+  } else if (sisamenit >= 60){
+    sisamenit=sisamenit % 60;
+    sisajam+=sisamenit / 60;
+  }
 
-  var captionhari = "Promo berakhir dalam " + sisahari + " hari";
+  var sisa = "Promo only in ";
+  if (sisahari==0){
 
-  var captionmenit = "Promo berakhir dalam " + sisamenit + " menit";
+  } else if(sisahari>=1) {
+    sisa+= sisahari + " day(s) ";
+  }
+
+  if (sisajam==0){
+
+  } else if (sisajam>=1) {
+    sisa+= sisajam + " hour(s) ";
+  }
+
+  if (sisamenit==0){
+
+  } else if (sisamenit>=1) {
+    sisa+= sisamenit + " minute(s) ";
+  }
+
+
+
+  // var captionjam = "Promo berakhir dalam " + sisajam + " Jam";
+
+  // var captionhari = "Promo berakhir dalam " + sisahari + " hari";
+
+  // var captionmenit = "Promo berakhir dalam " + sisamenit + " menit";
 
 
 
@@ -75,20 +111,12 @@ export const CourseCard = (props) => {
 
   return (
     <Box maxW="sm" borderWidth="1px" rounded="lg" overflow="hidden" m={2} shadow="xl">
-
-      {deadmenit ?
         <Alert status="error">
           <AlertIcon />
-          {captionmenit}
+          {sisa}
         </Alert>
-        :
-        deadjam ?
-          <Alert status="error">
-            <AlertIcon />
-            {captionjam}
-          </Alert> :
           <Box />
-      }
+  
 
 
       <img src={property.imageUrl} alt={property.imageAlt} />
@@ -101,13 +129,14 @@ export const CourseCard = (props) => {
           fontWeight="bold"
           as="h4"
           lineHeight="tight"
+          fontSize="xl"
         // isTruncated
         >
           {property.title}
         </Box>
         <Box d="flex" alignItems="baseline" fontWeight="semibold" mt="2">
           <Badge rounded="full" px="2" variantColor="teal" >
-            Rp.35.000- hanya di CourseDigital
+            Rp.35.000- or $2.5 USD
           </Badge>
 
         </Box>
@@ -116,9 +145,9 @@ export const CourseCard = (props) => {
 
         <Box as="del" fontSize="sm" fontWeight="semibold" color="#EC5252">
 
-          ${property.formattedPrice} USD
-          </Box>
-
+         Normal price ${property.formattedPrice} USD or Rp {property.formattedPrice.toFixed() * 14851}
+          
+        </Box>
 
 
         <Box d="flex" mt="2" alignItems="center">
@@ -134,27 +163,28 @@ export const CourseCard = (props) => {
 
 
         </Box>
-        <Box mt="1">
+
+
+
+        <Box mt="2">
           <ChakraLink
             isExternal
             href="https://wa.me/6287718075637?text=Halo%20min!%20Saya%20tertarik%20dengan%20Course%20Udemy%20yang%20dijual"
             flexGrow={3}
             mx={2}
           >
-            <Button width="100%" variant="solid" bg="#EC5252" color="white">
-              Beli
-      </Button>
+            <Button width="45%" variant="solid" bg="#EC5252" color="white">
+              Buy
+            </Button>
           </ChakraLink>
-
-        </Box>
-        <Box mt="1">
           <ChakraLink isExternal href={property.linkUdemy} flexGrow={1} mx={2}>
-            <Button width="100%" variant="outline" variantColor="green" color="#EC5252">
-              Cek Silabus
-      </Button>
+            <Button width="45%" variant="outline" variantColor="green" color="#EC5252">
+              Check Syllabus
+             </Button>
           </ChakraLink>
+        
         </Box>
-
+        
       </Box>
 
     </Box>

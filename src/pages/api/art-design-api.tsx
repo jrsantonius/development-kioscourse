@@ -3,7 +3,7 @@ import fetch from "node-fetch";
 async function getSortedPostsData() {
   // Instead of the file system,
   // fetch post data from an external API endpoint
-  const res = await fetch("https://teachinguide.azure-api.net/course-coupon?sortCol=students&sortDir=DESC&length=12&page=1&inkw=&discount=100&language=English&cat=IT%20%26%20Software", {
+  const res = await fetch("https://teachinguide.azure-api.net/course-coupon?sortCol=students&sortDir=DESC&length=12&page=1&inkw=&discount=100&language=English&cat=Design%7CPhotography%7CMusic", {
     "headers": {
       "accept": "application/json, text/plain, */*",
       "accept-language": "en-US,en;q=0.9,id;q=0.8",
@@ -12,11 +12,11 @@ async function getSortedPostsData() {
       "sec-fetch-mode": "cors",
       "sec-fetch-site": "cross-site"
     },
-    // "referrer": "https://www.teachinguide.com/udemy-coupon-codes/",
-    // "referrerPolicy": "no-referrer-when-downgrade",
+    //"referrer": "https://www.teachinguide.com/udemy-coupon-codes/",
+    //"referrerPolicy": "no-referrer-when-downgrade",
     "body": null,
     "method": "GET",
-    // "mode": "cors"
+    //"mode": "cors"
   });
   return res.json();
   // console.log('succes');
@@ -35,7 +35,7 @@ export default async (req, res) => {
     async function getSortedPostsData0() {
       // Instead of the file system,
       // fetch post data from an external API endpoint
-      const res = await fetch("https://teachinguide.azure-api.net/course-coupon?sortCol=students&sortDir=DESC&length=50&inkw=&discount=100&language=English&cat=IT%20%26%20Software", {
+      const res = await fetch("https://teachinguide.azure-api.net/course-coupon?sortCol=students&sortDir=DESC&length=12&page=1&inkw=&discount=100&language=English&cat=Design%7CPhotography%7CMusic", {
         "headers": {
           "accept": "application/json, text/plain, */*",
           "accept-language": "en-US,en;q=0.9,id;q=0.8",

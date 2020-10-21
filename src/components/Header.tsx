@@ -6,7 +6,8 @@ import {
   Icon,
   Button,
   Link,
-  Heading,
+  Heading, 
+  Select,
   Box, Flex
 } from "@chakra-ui/core";
 import { Container } from './Container'
@@ -35,12 +36,9 @@ export const Header = props => {
       width="100%"
       {...props}
     >
-      <Flex align="center" mr={5}>
-
-      </Flex>
 
 
-      <Container
+      {/* <Container
         spacing="1.5rem"
         width="100%"
         maxWidth="100%"
@@ -52,13 +50,8 @@ export const Header = props => {
         flexWrap="wrap"
         justifyContent="center"
       >
-        <Box w={["85px", "100px", "125px", "150px"]}>
-          <Link href="/">
-            <img src={"static/logocds.jpg"} />
-          </Link>
-
-        </Box>
-   </Container>
+        
+   </Container> */}
       <Container
         spacing="1.5rem"
         width="100%"
@@ -72,13 +65,20 @@ export const Header = props => {
         justifyContent="center"
         fontWeight="bold"
         mb="2"
+        align="left"
       >
+          <Box w={["85px", "100px", "125px", "150px"]}>
+          <Link href="/">
+            <img src={"static/logo.png"} />
+          </Link>
+
+        </Box>
          <MenuItems>
          <Link href="/">Home</Link></MenuItems>
         <MenuItems>
           <ChakraLink
             isExternal
-            href="https://www.instagram.com/coursedigital.store/"
+            href="https://www.instagram.com/kioscourse/"
            
           >Instagram</ChakraLink></MenuItems>
         <MenuItems><ChakraLink
