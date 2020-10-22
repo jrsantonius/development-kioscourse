@@ -5,7 +5,7 @@ export const SmallHero = ({ title }) => (
     
         <Flex justifyContent="center" alignItems="center" height="90vh">
       
-      course digital
+      KiosCourse
       
       
       

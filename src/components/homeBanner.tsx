@@ -44,12 +44,12 @@ export const HomeBan = ({ title }) => (
         mt={["5", "10", "10", "20"]}
         fontSize={["xl", "xl", "xl", "50px"]}
         fontWeight="bold"
-      >Course Digital Store</Box>
+      >Kios Course</Box>
       <Box
         ml="10"
 
         fontSize={["sm", "sm", "sm", "xl"]}
-      >Place where you can learn new knowledge easily.</Box>
+      >Place where you can learn new knowledge easily. Cheap. Certified. </Box>
       <Button width="fill" variant="solid" bg="#0C5EDE" color="white" ml="10" rounded="lg" mt="2" onClick={scrollWin}>
         Choose Courses <Icon name="chevron-down" size="30px" />
       </Button>

@@ -63,7 +63,7 @@ class App extends React.Component<{}, any>{
         <Header />
         <Container>
 
-          <Hero title="Academics" />
+          <Hero title="Teaching & Academics" />
           <Main>
             <Container
               flexDirection="row"

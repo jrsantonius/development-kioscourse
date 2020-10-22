@@ -51,55 +51,50 @@ const Udemy = () => (
           flex="1"
           justifyContent="center"
           py={2}>
-          <MenuCard
-            img={"https://img-a.udemycdn.com/course/480x270/2930584_fb33.jpg"}
-            title={"IT & SOFTWARE"}
-            price={"Programming Language | Network & Security | Operating Systems | IT Certification | Other"}
-            link={"/software-page"}
 
-          />
           <MenuCard
             img={"https://img-a.udemycdn.com/course/480x270/3066364_e36b_2.jpg"}
-            title={"DEVELOPMENT"}
+            title={"IT & SOFTWARE DEVELOPMENT"}
             price={"Web Development | Game Development | Software Engineering | Databases | Mobile Apps"}
-            link={"/development-page"}
+            link={"/it-software-development-page"}
 
 
           />
 
           <MenuCard
             img={"https://img-a.udemycdn.com/course/480x270/1984658_99af_2.jpg"}
-            title={"DESIGN"}
-            price={"Graphic Design | Design Thinking | 3D & Animation | Interior Design | Web Design | User Experience"}
-            link={"/design-page"}
+            title={"ART & DESIGN"}
+            price={"Graphic Design | Music | 3D & Animation | Interior Design | Photography | User Experience"}
+            link={"/art-design-page"}
 
           />
           <MenuCard
             img={"https://img-a.udemycdn.com/course/480x270/1266500_73ae_3.jpg"}
-            title={"BUSINESS"}
+            title={"BUSINESS & MARKETING"}
             price={"Entrepreneurship | Strategy | Business Law | Management | Industry | Real Estate"}
             link={"/business-page"}
 
           />
           <MenuCard
             img={"https://img-a.udemycdn.com/course/480x270/1400450_c54e_3.jpg"}
-            title={"FINANCE"}
+            title={"FINANCE & ACCOUNTING"}
             price={"Investing & Trading | Financial Modeling & Analysis | Economics | Taxes | Other Finance & Economics"}
             link={"/finance-accounting-page"}
 
           />
           <MenuCard
-            img={"https://img-a.udemycdn.com/course/480x270/2714060_b890.jpg"}
-            title={"MARKETING"}
-            price={"Product Marketing | Social Media Marketing | Advertising |  Branding | Search Engine Optimization"}
-            link={"/marketing-page"}
-
-          />
-          <MenuCard
             img={"https://img-a.udemycdn.com/course/480x270/1891642_ef06.jpg"}
-            title={"ACADEMICS"}
+            title={"TEACHING & ACADEMICS"}
             price={"Engineering | Humanities | Language | Social Science | Other Teaching & Academics"}
             link={"/academics-page"}
+
+          />
+
+          <MenuCard
+            img={"https://i.udemycdn.com/course/480x270/2921220_39a4_3.jpg"}
+            title={"LIFESTYLE & PERSONAL DEVELOPMENT"}
+            price={"Skills | Writing | Reading | Lifestyle | Health | Fitness | Food | Family"}
+            link={"/personal-development-page"}
 
           />
         </Container>

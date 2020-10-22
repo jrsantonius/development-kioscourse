@@ -19,6 +19,8 @@ import { DarkModeSwitch } from "../components/DarkModeSwitch";
 import { CTA } from "../components/CTA";
 import { Footer } from "../components/Footer";
 import { Pagination } from "../components/pagination";
+import { usePromiseTracker } from "react-promise-tracker";
+
 import Loader from 'react-loader-spinner';
 import Head from 'next/head'
 import { Header } from "../components/Header";
@@ -26,8 +28,11 @@ import { Header } from "../components/Header";
 
 
 
+
+
 var base;
 class App extends React.Component<{}, any>{
+
   constructor(props) {
     super(props);
 
@@ -41,13 +46,13 @@ class App extends React.Component<{}, any>{
   }
 
   componentDidMount() {
-    fetch("/api/marketing-api")
+    fetch("/api/personal-development-api")
       .then(response => response.json())
       .then(base => this.setState({ results: base.dataTotal, isLoading: false }));
 
     //console.log(data.pages);
 
-  }
+  };
 
 
   render() {
@@ -58,7 +63,7 @@ class App extends React.Component<{}, any>{
         <Header />
         <Container>
 
-          <Hero title="Marketing" />
+          <Hero title="Lifestyle & Personal Development" />
           <Main>
             <Container
               flexDirection="row"
@@ -98,6 +103,7 @@ class App extends React.Component<{}, any>{
 
           </Main>
 
+
           <Footer>
             <Text> © 2020 CourseDigital.store | Powered by-
       <ChakraLink
@@ -109,8 +115,8 @@ class App extends React.Component<{}, any>{
           </Footer>
 
         </Container>
-      </Box>
 
+      </Box>
 
     );
   }

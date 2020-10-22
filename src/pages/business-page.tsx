@@ -59,7 +59,7 @@ class App extends React.Component<{},any>{
       <Header/>
         <Container>
           
-            <Hero title="Business"/>
+            <Hero title="Business & Marketing"/>
             <Main>
             <Container
         flexDirection="row"

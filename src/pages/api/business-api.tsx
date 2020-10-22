@@ -35,7 +35,7 @@ export default async (req, res) => {
     async function getSortedPostsData0() {
       // Instead of the file system,
       // fetch post data from an external API endpoint
-      const res = await fetch("https://teachinguide.azure-api.net/course-coupon?sortCol=students&sortDir=DESC&length=50&inkw=&discount=100&language=English&cat=Business", {
+      const res = await fetch("https://teachinguide.azure-api.net/course-coupon?sortCol=students&sortDir=DESC&length=50&inkw=&discount=100&language=English&cat=Business%7CMarketing", {
         "headers": {
           "accept": "application/json, text/plain, */*",
           "accept-language": "en-US,en;q=0.9,id;q=0.8",

@@ -20,7 +20,7 @@ export default async (req, res) => {
           "accept-language": "en-US,en;q=0.9,id;q=0.8",
           "authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1OTIxNCwiZW1haWxfaWQiOiJrZXZpbmFobWFkLmZAZ21haWwuY29tIiwicGxhbiI6Ik9OX1RSSUFMIiwic3ViX3BsYW4iOiJPTl9UUklBTCIsInBsYW5fcGVyaW9kIjpudWxsfQ.5X5Gh93LEynveLK8LrTuRnYi6hSLreXR1CPqz1M5zqQ",
           "sec-fetch-dest": "empty",
-          "sec-fetch-mode": "cors",
+          "sec-fetch-mode": "cors", 
           "sec-fetch-site": "cross-site"
         },
         // "referrer": "https://www.teachinguide.com/udemy-coupon-codes/",
