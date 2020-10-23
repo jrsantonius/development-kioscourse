@@ -1,26 +1,26 @@
 import {
-    Link as ChakraLink,
-    Text,
-    Code,
-    Icon,
-    List,
-    ListIcon,
-    ListItem,Box
-  } from "@chakra-ui/core";
+  Link as ChakraLink,
+  Text,
+  Code,
+  Icon,
+  List,
+  ListIcon,
+  ListItem,Box
+} from "@chakra-ui/core";
 import React, { Component } from 'react';
-import { CourseCard } from "../components/CourseCard";
-import { Container } from "../components/Container";
-import { Hero } from "../components/Hero";
+import { CourseCard } from "../../components/CourseCard";
+import { Container } from "../../components/Container";
+import { Hero } from "../../components/Hero";
 
-import { HomeCard } from "../components/HomeCard";
-import { Main } from "../components/Main";
-import { DarkModeSwitch } from "../components/DarkModeSwitch";
-import { CTA } from "../components/CTA";
-import { Footer } from "../components/Footer";
+import { HomeCard } from "../../components/HomeCard";
+import { Main } from "../../components/Main";
+import { DarkModeSwitch } from "../../components/DarkModeSwitch";
+import { CTA } from "../../components/CTA";
+import { Footer } from "../../components/Footer";
 
 import Loader from 'react-loader-spinner';
 import Head from 'next/head'
-import { Header } from "../components/Header";
+import { Header } from "../../components/Header_2";
 
 
 
@@ -40,7 +40,7 @@ class App extends React.Component<{},any>{
   }
  
   componentDidMount() {
-    fetch("/api/it-software-development-api")
+    fetch("/api/business-api")
       .then(response => response.json())
       .then(base => this.setState({ results: base.dataTotal ,isLoading: false}));
      
@@ -56,11 +56,8 @@ class App extends React.Component<{},any>{
       <Box width="100%">
       <Header/>
         <Container>
-         
-            <Hero title="IT & Software Development"/>
-            <Box>
-
-            </Box>
+          
+            <Hero title="Business & Marketing"/>
             <Main>
             <Container
         flexDirection="row"
@@ -92,6 +89,7 @@ class App extends React.Component<{},any>{
             star={hit.Rating}
             time={hit.EndTime}
             linkUdemy={hit.Link}
+            students={hit.Students}
 
           />
         )}
@@ -112,8 +110,8 @@ class App extends React.Component<{},any>{
    
         </Container>
        
-        </Box>
       
+        </Box>
     );
   }
  

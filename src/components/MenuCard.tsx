@@ -16,6 +16,7 @@ export const MenuCard = (props) => {
     reviewCount: props.review,
     rating: 4,
     link:props.link,
+    students:props.students,
 
   };
 

@@ -16,9 +16,11 @@ export const CourseCard = (props) => {
     reviewCount: props.review,
     rating: 4,
     linkUdemy: props.linkUdemy,
+    students: props.students
 
   };
-
+  
+  const hargaasli= Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR'}).format((property.formattedPrice * 14000));
 
   const timeNow = new Date();
   const deadline = new Date(property.tenggat);
@@ -121,11 +123,11 @@ export const CourseCard = (props) => {
 
       <img src={property.imageUrl} alt={property.imageAlt} />
 
-      <Box p="6">
+      <Box p="4">
 
 
         <Box
-          mt="1"
+          mt="2"
           fontWeight="bold"
           as="h4"
           lineHeight="tight"
@@ -134,19 +136,18 @@ export const CourseCard = (props) => {
         >
           {property.title}
         </Box>
-        <Box d="flex" alignItems="baseline" fontWeight="semibold" mt="2">
-          <Badge rounded="full" px="2" variantColor="teal" >
-            Rp.35.000- or $2.5 USD
-          </Badge>
-
-        </Box>
-
-
 
         <Box as="del" fontSize="sm" fontWeight="semibold" color="#EC5252">
 
-         Normal price ${property.formattedPrice} USD or Rp {property.formattedPrice.toFixed() * 14851}
-          
+        {hargaasli} or ${property.formattedPrice} USD 
+        
+        </Box>
+
+        <Box d="flex" alignItems="baseline" fontWeight="semibold" >
+          <Badge rounded="full" variantColor="teal" >
+            Rp.35.000- or $2.5 USD
+          </Badge>
+
         </Box>
 
 
@@ -157,10 +158,10 @@ export const CourseCard = (props) => {
           {/* <Box  color="orange.400" /> */}
           <Icon name="star" color="orange.400" />
           <Box as="span" color="gray.600" fontSize="sm">
-            {property.bintang} ( {property.reviewCount} reviews )
+            {property.bintang} ( {property.reviewCount} reviews ) 
+            <Icon mr="1" ml="1"name="view" color="gray.400"/>
+              {property.students} students
           </Box>
-
-
 
         </Box>
 

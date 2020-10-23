@@ -38,6 +38,7 @@ export const FreeCard = (props) => {
     reviewCount: props.review,
     rating: 4,
     linkUdemy: props.linkUdemy,
+    students: props.students
 
   };
 
