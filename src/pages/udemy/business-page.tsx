@@ -11,6 +11,7 @@ import React, { Component } from 'react';
 import { CourseCard } from "../../components/CourseCard";
 import { Container } from "../../components/Container";
 import { Hero } from "../../components/Hero";
+import { Subhero } from "../../components/Subhero";
 
 import { HomeCard } from "../../components/HomeCard";
 import { Main } from "../../components/Main";
@@ -58,6 +59,7 @@ class App extends React.Component<{},any>{
         <Container>
           
             <Hero title="Business & Marketing"/>
+            <Subhero subtitle="cek"/>
             <Main>
             <Container
         flexDirection="row"

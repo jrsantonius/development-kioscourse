@@ -112,7 +112,7 @@ export const CourseCard = (props) => {
 
 
   return (
-    <Box maxW="sm" borderWidth="1px" rounded="lg" overflow="hidden" m={2} shadow="xl">
+    <Box maxW="sm" borderWidth="1px" rounded="lg" overflow="hidden" m={3} shadow="xl">
         <Alert status="error">
           <AlertIcon />
           {sisa}
@@ -174,12 +174,12 @@ export const CourseCard = (props) => {
             flexGrow={3}
             mx={2}
           >
-            <Button width="45%" variant="solid" bg="#EC5252" color="white">
+            <Button width="40%" variant="solid" bg="#EC5252" color="white">
               Buy
             </Button>
           </ChakraLink>
           <ChakraLink isExternal href={property.linkUdemy} flexGrow={1} mx={2}>
-            <Button width="45%" variant="outline" variantColor="green" color="#EC5252">
+            <Button width="40%" variant="outline" variantColor="green" color="#EC5252">
               Check Syllabus
              </Button>
           </ChakraLink>

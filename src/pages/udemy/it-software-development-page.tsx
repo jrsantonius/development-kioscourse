@@ -11,6 +11,8 @@ import React, { Component } from 'react';
 import { CourseCard } from "../../components/CourseCard";
 import { Container } from "../../components/Container";
 import { Hero } from "../../components/Hero";
+import { Subhero } from "../../components/Subhero";
+
 
 import { HomeCard } from "../../components/HomeCard";
 import { Main } from "../../components/Main";
